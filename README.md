@@ -210,3 +210,4 @@ Este projeto está licenciado sob a licença MIT. Consulte [LICENSE](LICENSE).
 ---
 
 Desenvolvido para servir conteúdo IPTV de forma organizada, resiliente e com cache em runtime.
+
