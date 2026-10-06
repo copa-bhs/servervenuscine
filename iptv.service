@@ -1,0 +1,28 @@
+# Arquivo de serviço do systemd para rodar o IPTV Organizer Pro no VPS.
+# Instalação rápida:
+#   sudo cp iptv.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable iptv
+#   sudo systemctl start iptv
+#
+# Logs:
+#   sudo journalctl -u iptv -f
+
+[Unit]
+Description=IPTV Organizer Pro
+After=network.target
+
+[Service]
+Type=simple
+User=iptv
+Group=iptv
+WorkingDirectory=/opt/iptv-server
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 -m uvicorn main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

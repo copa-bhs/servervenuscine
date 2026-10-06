@@ -1,0 +1,6 @@
+# Dependências do servidor
+# Não usar uvicorn[standard] em ambientes ARM/Termux para manter compatibilidade.
+fastapi
+uvicorn
+httpx
+aiofiles

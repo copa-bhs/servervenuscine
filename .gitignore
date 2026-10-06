@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Ambiente local
+.env
+.venv/
+venv/
+env/
+
+# Cache do projeto
+cache/
+
+# Logs e temporários
+*.log
+*.tmp
+*.new
+*.swp
+*.bak
+
+# Editor/IDE
+.vscode/
+!.vscode/settings.json
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
